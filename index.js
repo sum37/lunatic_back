@@ -7,7 +7,15 @@ const app = express();
 const PORT = process.env.PORT || 5001;
 
 // Middleware
-app.use(cors({origin: "*"}));
+const cors = require("cors");
+
+app.use(cors({
+  origin: ["https://your-vercel-app.vercel.app", "https://lunatic-back.onrender.com"],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  credentials: true, // ✅ 쿠키 포함하려면 true로 설정
+  allowedHeaders: ["Content-Type", "Authorization"],
+}));
+
 app.use(express.json()); // JSON 요청 파싱
 
 // MongoDB 연결
