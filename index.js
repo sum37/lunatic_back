@@ -6,9 +6,6 @@ require("dotenv").config();
 const app = express();
 const PORT = process.env.PORT || 5001;
 
-// Middleware
-const cors = require("cors");
-
 app.use(cors({
   origin: ["https://your-vercel-app.vercel.app", "https://lunatic-back.onrender.com"],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
