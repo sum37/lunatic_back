@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 5001;
 
 app.use(cors({
-  origin: ["https://lunatic-front-rebase.vercel.app"], // Vercel 프론트 도메인 명확히 지정
+  origin: "*", // Vercel 프론트 도메인 명확히 지정
   credentials: true, // ✅ 쿠키 포함 요청 허용
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // 허용 메소드 추가
   allowedHeaders: ["Content-Type", "Authorization"], // 허용 헤더 추가
