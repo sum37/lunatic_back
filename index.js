@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 5001;
 
 app.use(cors({
-  origin: ["https://lunatic-back.onrender.com"],
+  origin: "https://lunatic-front-rebase.vercel.app",
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   credentials: true, // ✅ 쿠키 포함하려면 true로 설정
   allowedHeaders: ["Content-Type", "Authorization"],
